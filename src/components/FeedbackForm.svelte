@@ -4,6 +4,18 @@
 
   let text = "";
   let btnDisabled = true;
+  let min = 10;
+  let message;
+
+  const handleInput = () => {
+    if (text.trim().length <= min) {
+      message = `Text must be at least ${min} characters`;
+      btnDisabled = true;
+    } else {
+      message = null;
+      btnDisabled = false;
+    }
+  };
 </script>
 
 <form>
@@ -14,9 +26,19 @@
     <form>
       <!-- Rating Select -->
       <div class="input-group">
-        <input type="text" bind:value={text} placeholder="Tell us something that keeps you coming back" />
+        <input
+          type="text"
+          bind:value={text}
+          on:input={handleInput}
+          placeholder="Tell us something that keeps you coming back"
+        />
         <Button type="submit" disabled={btnDisabled}>Send</Button>
       </div>
+      {#if message}
+        <div class="message">
+          {message}
+        </div>
+      {/if}
     </form>
   </Card>
 </form>
@@ -43,6 +65,7 @@
 
   input {
     flex-grow: 2;
+    padding-right: 18px;
     border: none;
     font-size: 16px;
   }
