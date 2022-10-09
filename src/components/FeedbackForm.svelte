@@ -1,8 +1,10 @@
 <script>
   import Card from "./Card.svelte";
   import Button from "./Button.svelte";
+  import RatingSelect from "./RatingSelect.svelte";
 
   let text = "";
+  let rating = 10;
   let btnDisabled = true;
   let min = 10;
   let message;
@@ -16,6 +18,8 @@
       btnDisabled = false;
     }
   };
+
+  const handleSelect = event => (rating = event.detail);
 </script>
 
 <form>
@@ -24,7 +28,7 @@
       <h2>How would you rate your service with us?</h2>
     </header>
     <form>
-      <!-- Rating Select -->
+      <RatingSelect on:rating-select={handleSelect} />
       <div class="input-group">
         <input
           type="text"
