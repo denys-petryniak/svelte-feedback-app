@@ -6,7 +6,7 @@
   import RatingSelect from "./RatingSelect.svelte";
 
   let text = "";
-  let rating = 10;
+  let rating;
   let btnDisabled = true;
   let min = 10;
   let message;
