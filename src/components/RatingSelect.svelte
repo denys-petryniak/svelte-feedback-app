@@ -102,10 +102,4 @@
     background: #ff6a95;
     color: #fff;
   }
-
-  /* @media (max-width: 768px) {
-    .rating {
-      flex-direction: column;
-    }
-  } */
 </style>
