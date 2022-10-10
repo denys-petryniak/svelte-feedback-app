@@ -1,8 +1,12 @@
 <script>
+  import { FeedbackStore } from "../stores";
   import { fade, scale } from "svelte/transition";
   import FeedbackItem from "./FeedbackItem.svelte";
+  import FeedbackForm from "./FeedbackForm.svelte";
 
-  export let feedback = [];
+  let feedback = [];
+
+  FeedbackStore.subscribe(data => (feedback = data));
 </script>
 
 {#each feedback as fb}
