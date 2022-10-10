@@ -1,8 +1,11 @@
 <script>
   import { v4 as uuidv4 } from "uuid";
+  import { createEventDispatcher } from "svelte";
   import Card from "./Card.svelte";
   import Button from "./Button.svelte";
   import RatingSelect from "./RatingSelect.svelte";
+
+  const dispatch = createEventDispatcher();
 
   let text = "";
   let rating = 10;
@@ -10,7 +13,7 @@
   let min = 10;
   let message;
 
-  const handleSelect = e => (rating = e.detail);
+  const handleSelect = event => (rating = event.detail);
 
   const handleInput = () => {
     if (text.trim().length <= min) {
@@ -30,7 +33,9 @@
         rating: +rating,
       };
 
-      console.log(newFeedback);
+      dispatch("add-feedback", newFeedback);
+
+      text = "";
     }
   };
 </script>
@@ -81,6 +86,7 @@
 
   input {
     flex-grow: 2;
+    padding-right: 12px;
     border: none;
     font-size: 16px;
   }
