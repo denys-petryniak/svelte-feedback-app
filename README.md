@@ -1,4 +1,8 @@
-# Svelte + Vite
+# Svelte Feedback App
+
+**[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/denys-petryniak/svelte-feedback-app)**
+
+## Svelte + Vite
 
 This template should help get you started developing with Svelte in Vite.
 
