@@ -1,6 +1,14 @@
 # Svelte Feedback App
 
-**[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/denys-petryniak/svelte-feedback-app)**
+<img width="650" alt="image" src="https://github.com/denys-petryniak/svelte-feedback-app/assets/16530588/d24e5595-1ab9-416f-8899-7f37c6e9d4cc">
+
+## Explore in StackBlitz
+
+Click the button below to open the project in StackBlitz for preview and experimentation:
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/denys-petryniak/svelte-feedback-app)
+
+Feel free to explore the code, make changes, and see the results in real-time!
 
 ## Svelte + Vite
 
